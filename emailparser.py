@@ -1,11 +1,12 @@
 def parse_mail(text):
-    mailtext = text.split("::")
-    i, name = mailtext[0].split("_",1)
-    i, vorname
+    mailtext = text.split("\n")
+    _, name = mailtext[0].split("_",1)
+    _, vorname = mailtext[1].split("_",1)
+    _, grund = mailtext[2].split("_",1)
     print mailtext
     print name
-
-
-parse_mail("name_Proell\n vorname_Milan::Grund_Kein Bock auf Schule")
+    print vorname
+    print grund
+parse_mail("name_Proell\nvorname_Milan\nGrund_Testgrund")
 
     
