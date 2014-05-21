@@ -53,7 +53,7 @@ class Helferlein(QtGui.QMainWindow):
         self.db.setHostName("localhost")
         self.db.setDatabaseName("helferlein")
         self.user = "root"
-        self.password = "cermit,1"
+        self.password = "*****"
         if self.db.open(self.user, self.password):
             print "DB Verbindung"
             #self.init_db()
