@@ -1,8 +1,8 @@
 #IMAP_port: 143
-#Mail: test@pohlers-web.de
-#name: m02c0434
-#pass: milanfelix42
-#server: w0089225.kasserver.com
+#Mail: *******
+#name: *******
+#pass: ********
+#server: *******
 
 import imaplib, getpass
 
