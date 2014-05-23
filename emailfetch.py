@@ -4,14 +4,15 @@
 #pass: ********
 #server: *******
 
-import imaplib, getpass
+import imaplib
 
-M = imaplib.IMAP4()
-M.login(getpass.getuser(), getpass.getpass())
-M.select()
-typ, data = M.search(None, 'ALL')
+#siehe e-learning
+
+host.select()
+typ, data = host.search(None, '(ALL)')
+print typ, data, data[0].split()
 for num in data[0].split():
-    typ, data = M.fetch(num, '(RFC822)')
-    print 'Message %s\n%s\n' % (num, data[0][1])
-M.close()
-M.logout()
+    typ, data = host.fetch(num, '(BODY[TEXT])')
+    print data[0][1]
+host.close()
+host.logout()
